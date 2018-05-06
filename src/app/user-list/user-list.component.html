@@ -1,5 +1,8 @@
-
-<ul *ngFor = "let user of users" class="list-group">
-  <li class="list-group-item">{{ user.name }}</li>
-</ul>
+<div class="row col-md-3">
+  <ul class="list-group">
+    <li  *ngFor="let user of users" class="list-group-item">
+      <div (click) = "onSelect(user)"class="btn btn-primary"><span class="badge">{{ user.id }}</span> {{ user.name }}</div>
+    </li>
+  </ul>
+</div>
 {{errorMsg}}
